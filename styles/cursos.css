@@ -6,7 +6,6 @@ main {
 }
 
 .curso {
-    background-image: url("../imagens/biblioteca.png");
     background-color: rgba(0, 0, 0, 0.4);
     background-size: cover;
     background-position: center;
@@ -21,6 +20,26 @@ main {
     justify-content: center;
 }
 
+.curso:first-child {
+    background-image: url("/imagens/agropecuaria_3.jpg");
+}
+
+.curso:nth-child(2) {
+    background-image: url("/imagens/info1.jpg");
+}
+
+.curso:nth-child(3) {
+    background-image: url("/imagens/agroindustria.jpeg");
+    background-size: 95%;
+    background-position: 50% 70%;
+}
+
+.curso:nth-child(4) {
+    background-image: url("/imagens/lazer.png");
+    background-position: 50% 70%;
+    background-size: 95%;
+}
+
 .curso p {
     font-size: clamp(20px, 6rem, 40px);
     font-weight: bold;
@@ -30,10 +49,20 @@ main {
 }
 
 .curso:hover {
-    background-size: 110%;
     background-blend-mode: darken;
 }
 
 .curso:hover p {
     opacity: 1;
+}
+
+@media screen and (max-width: 640px) {
+    .curso {
+        background-size: 110%;
+        background-blend-mode: darken;
+    }
+    
+    .curso p {
+        opacity: 1;
+    }
 }
